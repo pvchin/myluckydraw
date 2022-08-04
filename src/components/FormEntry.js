@@ -181,266 +181,266 @@ const FormEntry = () => {
   };
 
   return (
-    <Flex minH="70vh" align="center" justify="center">
-      <Stack
-        spacing={8}
-        mx="auto"
-        w={{ base: 'auto', md: 'xl' }}
-        py={1}
-        px={{ base: '1', md: '6' }}
-      >
-        <Box rounded="lg" bg="white" boxShadow="lg" p={{ base: '1', md: '8' }}>
-          <Stack align="center" pb={2}>
-            <Heading size="md">Lucky Draw Entry Form</Heading>
-          </Stack>
-          <form onSubmit={handleSubmit(onSubmit)}>
-            <VStack alignItems="flex-start">
-              <FormControl>
-                <Controller
-                  control={control}
-                  name="name"
-                  //defaultValue={email}
+    <Flex minH="70vh">
+        <Center>
+      <Stack spacing={8} mx="auto" w={{ base: 'xl', md: 'xl' }} py={1} px={1}>
+          <Box p={5} rounded="lg" bg="white" boxShadow="lg">
+            <Stack align="center" pb={2}>
+              <Heading size="md">Lucky Draw Entry Form</Heading>
+            </Stack>
+            <form onSubmit={handleSubmit(onSubmit)}>
+              <VStack alignItems="flex-start">
+                <FormControl>
+                  <Controller
+                    control={control}
+                    name="name"
+                    //defaultValue={email}
 
-                  render={({ field: { onChange, value, ref } }) => (
-                    <InputGroup>
-                      <HStack w="100%" py={1}>
-                        <InputLeftAddon
-                          fontSize={{ base: 'sm', md: 'md' }}
-                          children="Name"
-                          minWidth={{ base: 'auto', md: field_width }}
-                        />
+                    render={({ field: { onChange, value, ref } }) => (
+                      <InputGroup>
+                        <HStack w="100%" py={1}>
+                          <InputLeftAddon
+                            fontSize={{ base: 'sm', md: 'md' }}
+                            children="Name"
+                            minWidth={{ base: 'auto', md: field_width }}
+                          />
 
-                        <Input
-                          p={1}
-                          size={{ base: 'sm', md: 'md' }}
-                          name="name"
-                          value={value}
-                          onChange={onChange}
-                          //textTransform="capitalize"
-                          ref={ref}
-                          placeholder="name"
-                        />
-                      </HStack>
-                    </InputGroup>
-                  )}
-                />
-              </FormControl>
-              <FormControl>
-                <Controller
-                  control={control}
-                  name="icno"
-                  //defaultValue={name}
-                  render={({ field: { onChange, value, ref } }) => (
-                    <InputGroup>
-                      <HStack w="100%" py={1}>
-                        <InputLeftAddon
-                          children="IC No"
-                          fontSize={{ base: 'sm', md: 'md' }}
-                          minWidth={{ base: 'auto', md: field_width }}
-                        />
-                        <Input
-                          name="icno"
-                          p={1}
-                          size={{ base: 'sm', md: 'md' }}
-                          value={value}
-                          onChange={onChange}
-                          //textTransform="capitalize"
-                          ref={ref}
-                          placeholder="IC No"
-                        />
-                      </HStack>
-                    </InputGroup>
-                  )}
-                />
-              </FormControl>
-              <FormControl>
-                <Controller
-                  control={control}
-                  name="mobile"
-                  //defaultValue={phone}
-                  render={({ field: { onChange, value, ref } }) => (
-                    <InputGroup>
-                      <HStack w="100%" py={1}>
-                        <InputLeftAddon
-                          children="Mobile No"
-                          fontSize={{ base: 'sm', md: 'md' }}
-                          minWidth={{ base: 'auto', md: field_width }}
-                        />
-                        <Input
-                          name="mobile"
-                          p={1}
-                          size={{ base: 'sm', md: 'md' }}
-                          value={value}
-                          onChange={onChange}
-                          //textTransform="capitalize"
-                          ref={ref}
-                          placeholder="mobile no"
-                        />
-                      </HStack>
-                    </InputGroup>
-                  )}
-                />
-              </FormControl>
-              <FormControl>
-                <Controller
-                  control={control}
-                  name="email"
-                  //defaultValue={phone}
-                  render={({ field: { onChange, value, ref } }) => (
-                    <InputGroup>
-                      <HStack w="100%" py={1}>
-                        <InputLeftAddon
-                          children="Email"
-                          fontSize={{ base: 'sm', md: 'md' }}
-                          minWidth={{ base: 'auto', md: field_width }}
-                        />
-                        <Input
-                          name="email"
-                          value={value}
-                          p={1}
-                          size={{ base: 'sm', md: 'md' }}
-                          onChange={onChange}
-                          //textTransform="capitalize"
-                          ref={ref}
-                          placeholder="email address"
-                        />
-                      </HStack>
-                    </InputGroup>
-                  )}
-                />
-              </FormControl>
-              <FormControl>
-                <Controller
-                  control={control}
-                  name="igid"
-                  //defaultValue={phone}
-                  render={({ field: { onChange, value, ref } }) => (
-                    <InputGroup>
-                      <HStack w="100%" py={1}>
-                        <InputLeftAddon
-                          children="IG Id"
-                          fontSize={{ base: 'sm', md: 'md' }}
-                          minWidth={{ base: 'auto', md: field_width }}
-                        />
-                        <Input
-                          name="igid"
-                          value={value}
-                          p={1}
-                          size={{ base: 'sm', md: 'md' }}
-                          onChange={onChange}
-                          //textTransform="capitalize"
-                          ref={ref}
-                          placeholder="your Instagram id"
-                        />
-                      </HStack>
-                    </InputGroup>
-                  )}
-                />
-              </FormControl>
-              <FormControl>
-                <Controller
-                  control={control}
-                  name="receiptno"
-                  //defaultValue={phone}
-                  render={({ field: { onChange, value, ref } }) => (
-                    <InputGroup>
-                      <HStack w="100%" py={1}>
-                        <InputLeftAddon
-                          children="Receipt No"
-                          fontSize={{ base: 'sm', md: 'md' }}
-                          minWidth={{ base: 'none', md: field_width }}
-                        />
-                        <Input
-                          name="receiptno"
-                          value={value}
-                          p={1}
-                          size={{ base: 'sm', md: 'md' }}
-                          onChange={onChange}
-                          //textTransform="capitalize"
-                          ref={ref}
-                          placeholder="receipt no"
-                        />
-                      </HStack>
-                    </InputGroup>
-                  )}
-                />
-              </FormControl>
-              <FormControl>
-                <Controller
-                  control={control}
-                  name="amount"
-                  //defaultValue={phone}
-                  render={({ field: { onChange, value, ref } }) => (
-                    <InputGroup>
-                      <HStack w="100%" py={1}>
-                        <InputLeftAddon
-                          children="Amount"
-                          fontSize={{ base: 'sm', md: 'md' }}
-                          minWidth={{ base: 'none', md: field_width }}
-                        />
-                        <Input
-                          name="amount"
-                          value={value}
-                          type="number"
-                          p={1}
-                          size={{ base: 'sm', md: 'md' }}
-                          onChange={e => onChange(parseFloat(e.target.value))}
-                          //textTransform="capitalize"
-                          ref={ref}
-                          placeholder="amount"
-                        />
-                      </HStack>
-                    </InputGroup>
-                  )}
-                />
-              </FormControl>
-            </VStack>
-            <Button
-              mt={4}
-              colorScheme="teal"
-              isLoading={isSubmitting}
-              type="submit"
-            >
-              Submit
-            </Button>
-            <Box>
-              <Center>
-                <Heading size="md">Pls upload your receipt</Heading>
-              </Center>
-              <ImageUpload files={files} setFiles={setFiles} onDrop={onDrop} />
-            </Box>
-          </form>
-        </Box>
-        <Modal isOpen={isOpen} onClose={onClose}>
-          <ModalOverlay />
-          <ModalContent>
-            <ModalHeader>
-              <Center>
-                <Heading size="lg">Your Lucky Draw No</Heading>
-              </Center>
-            </ModalHeader>
-            <ModalCloseButton />
-            <ModalBody>
-              <Box>
-                {drawno.length > 0 &&
-                  drawno.map(rec => (
-                    <Box key={rec.no}>
-                      <Center>
-                        <Heading size="lg">{rec.no}</Heading>
-                      </Center>
-                    </Box>
-                  ))}
-              </Box>
-            </ModalBody>
-
-            <ModalFooter>
-              <Button colorScheme="blue" mr={3} onClick={onClose}>
-                Close
+                          <Input
+                            p={1}
+                            size={{ base: 'sm', md: 'md' }}
+                            name="name"
+                            value={value}
+                            onChange={onChange}
+                            //textTransform="capitalize"
+                            ref={ref}
+                            placeholder="name"
+                          />
+                        </HStack>
+                      </InputGroup>
+                    )}
+                  />
+                </FormControl>
+                <FormControl>
+                  <Controller
+                    control={control}
+                    name="icno"
+                    //defaultValue={name}
+                    render={({ field: { onChange, value, ref } }) => (
+                      <InputGroup>
+                        <HStack w="100%" py={1}>
+                          <InputLeftAddon
+                            children="IC No"
+                            fontSize={{ base: 'sm', md: 'md' }}
+                            minWidth={{ base: 'auto', md: field_width }}
+                          />
+                          <Input
+                            name="icno"
+                            p={1}
+                            size={{ base: 'sm', md: 'md' }}
+                            value={value}
+                            onChange={onChange}
+                            //textTransform="capitalize"
+                            ref={ref}
+                            placeholder="IC No"
+                          />
+                        </HStack>
+                      </InputGroup>
+                    )}
+                  />
+                </FormControl>
+                <FormControl>
+                  <Controller
+                    control={control}
+                    name="mobile"
+                    //defaultValue={phone}
+                    render={({ field: { onChange, value, ref } }) => (
+                      <InputGroup>
+                        <HStack w="100%" py={1}>
+                          <InputLeftAddon
+                            children="Mobile No"
+                            fontSize={{ base: 'sm', md: 'md' }}
+                            minWidth={{ base: 'auto', md: field_width }}
+                          />
+                          <Input
+                            name="mobile"
+                            p={1}
+                            size={{ base: 'sm', md: 'md' }}
+                            value={value}
+                            onChange={onChange}
+                            //textTransform="capitalize"
+                            ref={ref}
+                            placeholder="mobile no"
+                          />
+                        </HStack>
+                      </InputGroup>
+                    )}
+                  />
+                </FormControl>
+                <FormControl>
+                  <Controller
+                    control={control}
+                    name="email"
+                    //defaultValue={phone}
+                    render={({ field: { onChange, value, ref } }) => (
+                      <InputGroup>
+                        <HStack w="100%" py={1}>
+                          <InputLeftAddon
+                            children="Email"
+                            fontSize={{ base: 'sm', md: 'md' }}
+                            minWidth={{ base: 'auto', md: field_width }}
+                          />
+                          <Input
+                            name="email"
+                            value={value}
+                            p={1}
+                            size={{ base: 'sm', md: 'md' }}
+                            onChange={onChange}
+                            //textTransform="capitalize"
+                            ref={ref}
+                            placeholder="email address"
+                          />
+                        </HStack>
+                      </InputGroup>
+                    )}
+                  />
+                </FormControl>
+                <FormControl>
+                  <Controller
+                    control={control}
+                    name="igid"
+                    //defaultValue={phone}
+                    render={({ field: { onChange, value, ref } }) => (
+                      <InputGroup>
+                        <HStack w="100%" py={1}>
+                          <InputLeftAddon
+                            children="IG Id"
+                            fontSize={{ base: 'sm', md: 'md' }}
+                            minWidth={{ base: 'auto', md: field_width }}
+                          />
+                          <Input
+                            name="igid"
+                            value={value}
+                            p={1}
+                            size={{ base: 'sm', md: 'md' }}
+                            onChange={onChange}
+                            //textTransform="capitalize"
+                            ref={ref}
+                            placeholder="your Instagram id"
+                          />
+                        </HStack>
+                      </InputGroup>
+                    )}
+                  />
+                </FormControl>
+                <FormControl>
+                  <Controller
+                    control={control}
+                    name="receiptno"
+                    //defaultValue={phone}
+                    render={({ field: { onChange, value, ref } }) => (
+                      <InputGroup>
+                        <HStack w="100%" py={1}>
+                          <InputLeftAddon
+                            children="Receipt No"
+                            fontSize={{ base: 'sm', md: 'md' }}
+                            minWidth={{ base: 'none', md: field_width }}
+                          />
+                          <Input
+                            name="receiptno"
+                            value={value}
+                            p={1}
+                            size={{ base: 'sm', md: 'md' }}
+                            onChange={onChange}
+                            //textTransform="capitalize"
+                            ref={ref}
+                            placeholder="receipt no"
+                          />
+                        </HStack>
+                      </InputGroup>
+                    )}
+                  />
+                </FormControl>
+                <FormControl>
+                  <Controller
+                    control={control}
+                    name="amount"
+                    //defaultValue={phone}
+                    render={({ field: { onChange, value, ref } }) => (
+                      <InputGroup>
+                        <HStack w="100%" py={1}>
+                          <InputLeftAddon
+                            children="Amount"
+                            fontSize={{ base: 'sm', md: 'md' }}
+                            minWidth={{ base: 'none', md: field_width }}
+                          />
+                          <Input
+                            name="amount"
+                            value={value}
+                            type="number"
+                            p={1}
+                            size={{ base: 'sm', md: 'md' }}
+                            onChange={e => onChange(parseFloat(e.target.value))}
+                            //textTransform="capitalize"
+                            ref={ref}
+                            placeholder="amount"
+                          />
+                        </HStack>
+                      </InputGroup>
+                    )}
+                  />
+                </FormControl>
+              </VStack>
+              <Button
+                mt={4}
+                colorScheme="teal"
+                isLoading={isSubmitting}
+                type="submit"
+              >
+                Submit
               </Button>
-            </ModalFooter>
-          </ModalContent>
-        </Modal>
+              <Box>
+                <Center>
+                  <Heading size="md">Pls upload your receipt</Heading>
+                </Center>
+                <ImageUpload
+                  files={files}
+                  setFiles={setFiles}
+                  onDrop={onDrop}
+                />
+              </Box>
+            </form>
+          </Box>
+          <Modal isOpen={isOpen} onClose={onClose}>
+            <ModalOverlay />
+            <ModalContent>
+              <ModalHeader>
+                <Center>
+                  <Heading size="lg">Your Lucky Draw No</Heading>
+                </Center>
+              </ModalHeader>
+              <ModalCloseButton />
+              <ModalBody>
+                <Box>
+                  {drawno.length > 0 &&
+                    drawno.map(rec => (
+                      <Box key={rec.no}>
+                        <Center>
+                          <Heading size="lg">{rec.no}</Heading>
+                        </Center>
+                      </Box>
+                    ))}
+                </Box>
+              </ModalBody>
+
+              <ModalFooter>
+                <Button colorScheme="blue" mr={3} onClick={onClose}>
+                  Close
+                </Button>
+              </ModalFooter>
+            </ModalContent>
+          </Modal>
       </Stack>
+        </Center>
     </Flex>
   );
 };
