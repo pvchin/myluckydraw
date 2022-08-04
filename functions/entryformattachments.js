@@ -1,8 +1,8 @@
 const formattedReturn = require('./formattedReturn');
 const getEntryformAttachments = require('./entryformattachmentsTable/getEntryformattachments');
-const createEntryformAttachment = require('./entryformattachmentsTable/createEntryformAttachment');
-const deleteEntryformAttachment = require('./entryformattachmentsTable/deleteEntryformAttachment');
-const updateEntryformAttachment = require('./entryformattachmentsTable/updateEntryformAttachment');
+const createEntryformAttachment = require('./entryformattachmentsTable/createEntryformattachment');
+const deleteEntryformAttachment = require('./entryformattachmentsTable/deleteEntryformattachment');
+const updateEntryformAttachment = require('./entryformattachmentsTable/updateEntryformattachment');
 
 exports.handler = async event => {
   if (event.httpMethod === 'GET') {
