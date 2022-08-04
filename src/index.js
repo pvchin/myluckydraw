@@ -4,14 +4,24 @@ import * as ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import * as serviceWorker from './serviceWorker';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+import { RecoilRoot } from 'recoil';
 
+import { theme } from './theme';
 const container = document.getElementById('root');
 const root = ReactDOM.createRoot(container);
+const queryClient = new QueryClient();
 
 root.render(
   <StrictMode>
-    <ColorModeScript />
-    <App />
+    <QueryClientProvider client={queryClient}>
+      <RecoilRoot>
+        <ColorModeScript />
+        <App />
+        <ReactQueryDevtools />
+      </RecoilRoot>
+    </QueryClientProvider>
   </StrictMode>
 );
 
