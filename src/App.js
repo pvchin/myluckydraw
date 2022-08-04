@@ -27,7 +27,7 @@ function App() {
         templateColumns="repeat(6, 1fr)"
         gap={4}
       >
-        <GridItem colSpan={6} bg="tomato">
+        <GridItem colSpan={6} bg="teal.100">
           <Center>
             <Heading>Lucky Draw</Heading>
           </Center>
