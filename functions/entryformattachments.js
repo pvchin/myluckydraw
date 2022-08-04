@@ -3,6 +3,7 @@ const getEntryformAttachments = require('./entryformattachmentsTable/getEntryfor
 const createEntryformAttachment = require('./entryformattachmentsTable/createEntryformAttachment');
 const deleteEntryformAttachment = require('./entryformattachmentsTable/deleteEntryformAttachment');
 const updateEntryformAttachment = require('./entryformattachmentsTable/updateEntryformAttachment');
+
 exports.handler = async event => {
   if (event.httpMethod === 'GET') {
     return await getEntryformAttachments(event);
