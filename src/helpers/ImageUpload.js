@@ -129,18 +129,6 @@ const ImageUpload = ({ files, setFiles, onDrop }) => {
     onViewImageOpen();
   };
 
-  // const thumbs = files.map((file) => (
-  // <div style={thumb} key={file.name}>
-  //   <div style={thumbInner}>
-  //     <img
-  //       alt={file.name}
-  //       src={file.preview}
-  //       style={img}
-  //     />
-  //   </div>
-  //   </div>
-  // ))
-
   const Thumbs = () => {
     return files.map(file => {
       <Box
