@@ -182,8 +182,14 @@ const FormEntry = () => {
 
   return (
     <Flex minH="70vh">
-        <Center>
-      <Stack spacing={8} mx="auto" w={{ base: 'xl', md: 'xl' }} py={1} px={1}>
+      <Center>
+        <Stack
+          spacing={8}
+          mx="auto"
+          w={{ base: 'auto', md: 'xl' }}
+          py={1}
+          px={1}
+        >
           <Box p={5} rounded="lg" bg="white" boxShadow="lg">
             <Stack align="center" pb={2}>
               <Heading size="md">Lucky Draw Entry Form</Heading>
@@ -439,8 +445,8 @@ const FormEntry = () => {
               </ModalFooter>
             </ModalContent>
           </Modal>
-      </Stack>
-        </Center>
+        </Stack>
+      </Center>
     </Flex>
   );
 };
