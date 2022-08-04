@@ -416,7 +416,7 @@ const FormEntry = () => {
           <ModalContent>
             <ModalHeader>
               <Center>
-                <Heading size='lg'>Your Lucky Draw No</Heading>
+                <Heading size="lg">Your Lucky Draw No</Heading>
               </Center>
             </ModalHeader>
             <ModalCloseButton />
