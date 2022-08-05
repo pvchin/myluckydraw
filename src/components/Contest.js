@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import {
   Box,
   Button,
@@ -7,7 +7,7 @@ import {
   FormControl,
   FormLabel,
   FormErrorMessage,
-    Heading,
+  Heading,
   Image,
   Input,
   InputGroup,
@@ -31,13 +31,13 @@ import img1 from '../assets/Giveaway.png';
 const Contest = () => {
   return (
     <Flex>
-      <Stack spacing={5} mx="auto" w={{ base: 'auto', md: 'xl' }} py={1} px={1}>
+      <Stack spacing={5} mx="auto" w={{ base: 'sm', md: 'xl' }} py={1} px={1}>
         <Center>
           <Image src={img1} alt="album" />
         </Center>
       </Stack>
     </Flex>
   );
-}
+};
 
-export default Contest
+export default Contest;
