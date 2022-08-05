@@ -187,12 +187,12 @@ const FormEntry = () => {
           spacing={8}
           mx="auto"
           w={{ base: 'auto', md: 'xl' }}
-          py={1}
-          px={1}
+          py={{ base: 1, md: 0 }}
+          px={{ base: 1, md: 0 }}
         >
           <Box p={5} rounded="lg" bg="white" boxShadow="lg">
             <Stack align="center" pb={2}>
-              <Heading size={{ base: 'md', md: 'none' }}>
+              <Heading size={{ base: 'sm', md: 'md' }}>
                 Lucky Draw Entry Form
               </Heading>
             </Stack>
