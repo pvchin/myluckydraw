@@ -49,6 +49,8 @@ const initial_values = {
   amount: '',
 };
 
+const FONT_SIZE = `{{ base: 'sm', md: 'md'}}`;
+
 const FormEntry = () => {
   const field_width = '40';
   const [state, setState] = useState(initial_values);
@@ -187,8 +189,8 @@ const FormEntry = () => {
           spacing={8}
           mx="auto"
           w={{ base: 'auto', md: 'xl' }}
-          py={{ base: 1, md: 0 }}
-          px={{ base: 1, md: 0 }}
+          py={{ base: 0, md: 1 }}
+          px={{ base: 0, md: 1 }}
         >
           <Box p={5} rounded="lg" bg="white" boxShadow="lg">
             <Stack align="center" pb={2}>
@@ -208,7 +210,7 @@ const FormEntry = () => {
                       <InputGroup>
                         <HStack w="100%" py={1}>
                           <InputLeftAddon
-                            fontSize={{ base: 'sm', md: 'md' }}
+                            fontSize={FONT_SIZE}
                             children="Name"
                             minWidth={{ base: 'auto', md: field_width }}
                           />
@@ -408,7 +410,9 @@ const FormEntry = () => {
               </Button>
               <Box>
                 <Center>
-                  <Heading size="md">Pls upload your receipt</Heading>
+                  <Heading size={{ base: 'sm', md: 'md' }}>
+                    Pls upload your receipt
+                  </Heading>
                 </Center>
                 <ImageUpload
                   files={files}
