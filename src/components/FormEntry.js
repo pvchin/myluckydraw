@@ -50,10 +50,10 @@ const initial_values = {
   amount: '',
 };
 
-
 const FormEntry = () => {
-  const field_width = '40';
-  const font_size = useBreakpointValue({ base: 'sm', md: 'md'})
+  const field_width = useBreakpointValue({ base: 15, md: 40 });
+  const FIELD_WIDTH = useBreakpointValue({ base: 15, md: 40 });
+  const FONT_SIZE = useBreakpointValue({ base: 10, md: 18 });
   const [state, setState] = useState(initial_values);
   const [files, setFiles] = useState([]);
   const [newFile, setNewFile] = useState({});
@@ -211,9 +211,9 @@ const FormEntry = () => {
                       <InputGroup>
                         <HStack w="100%" py={1}>
                           <InputLeftAddon
-                            fontSize={font_size}
+                            fontSize={FONT_SIZE}
                             children="Name"
-                            minWidth={{ base: 'auto', md: field_width }}
+                            minWidth={FIELD_WIDTH}
                           />
 
                           <Input
@@ -456,6 +456,6 @@ const FormEntry = () => {
       </Center>
     </Flex>
   );
-};
+};;
 
 export default FormEntry;
