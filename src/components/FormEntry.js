@@ -26,6 +26,7 @@ import {
   VStack,
   Text,
   useDisclosure,
+  useBreakpointValue,
 } from '@chakra-ui/react';
 import { useEntryform } from '../react-query/entryform/useEntryform';
 import { useAddEntryform } from '../react-query/entryform/useCreateEntryform';
@@ -49,10 +50,10 @@ const initial_values = {
   amount: '',
 };
 
-const FONT_SIZE = `{{ base: 'sm', md: 'md'}}`;
 
 const FormEntry = () => {
   const field_width = '40';
+  const font_size = useBreakpointValue({ base: 'sm', md: 'md'})
   const [state, setState] = useState(initial_values);
   const [files, setFiles] = useState([]);
   const [newFile, setNewFile] = useState({});
@@ -210,7 +211,7 @@ const FormEntry = () => {
                       <InputGroup>
                         <HStack w="100%" py={1}>
                           <InputLeftAddon
-                            fontSize={FONT_SIZE}
+                            fontSize={font_size}
                             children="Name"
                             minWidth={{ base: 'auto', md: field_width }}
                           />
