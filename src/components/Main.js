@@ -31,12 +31,24 @@ const Main = () => {
         py={[0, 10, 20]}
         direction={{ base: 'column', md: 'row' }}
       >
-        <VStack w="full" h="full" p={10} spacing={10} alignItems="flex-start">
+        <VStack
+          w="full"
+          h="full"
+          p={{ base: 1, md: 10 }}
+          spacing={10}
+          alignItems="flex-start"
+        >
           <Center>
-           <Contest />
+            <Contest />
           </Center>
         </VStack>
-        <VStack w="full" h="full" p={10} spacing={10} alignItems="flex-start">
+        <VStack
+          w="full"
+          h="full"
+          p={{ base: 1, md: 10 }}
+          spacing={10}
+          alignItems="flex-start"
+        >
           <Center>
             <FormEntry />
           </Center>
