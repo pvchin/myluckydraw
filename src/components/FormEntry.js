@@ -52,8 +52,7 @@ const initial_values = {
 };
 
 const FormEntry = () => {
-  const field_width = useBreakpointValue({ base: 15, md: 40 });
-  const FIELD_WIDTH = useBreakpointValue({ base: 15, md: 40 });
+  const FIELD_WIDTH = useBreakpointValue({ base: 20, md: 40 });
   const FONT_SIZE = useBreakpointValue({ base: 10, md: 18 });
   const [state, setState] = useState(initial_values);
   const [files, setFiles] = useState([]);
@@ -220,7 +219,7 @@ const FormEntry = () => {
 
                     render={({ field: { onChange, value, ref } }) => (
                       <InputGroup>
-                        <HStack w="100%" py={1}>
+                        <HStack w="100%" py={{ base: 0, md: 1 }}>
                           <InputLeftAddon
                             children="Name"
                             fontSize={FONT_SIZE}
@@ -250,7 +249,7 @@ const FormEntry = () => {
                     //defaultValue={name}
                     render={({ field: { onChange, value, ref } }) => (
                       <InputGroup>
-                        <HStack w="100%" py={1}>
+                        <HStack w="100%" py={{ base: 0, md: 1 }}>
                           <InputLeftAddon
                             children="IC No"
                             fontSize={FONT_SIZE}
@@ -279,7 +278,7 @@ const FormEntry = () => {
                     //defaultValue={phone}
                     render={({ field: { onChange, value, ref } }) => (
                       <InputGroup>
-                        <HStack w="100%" py={1}>
+                        <HStack w="100%" py={{ base: 0, md: 1 }}>
                           <InputLeftAddon
                             children="Mobile No"
                             fontSize={FONT_SIZE}
