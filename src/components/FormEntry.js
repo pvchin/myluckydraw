@@ -211,8 +211,8 @@ const FormEntry = () => {
                       <InputGroup>
                         <HStack w="100%" py={1}>
                           <InputLeftAddon
-                            fontSize={FONT_SIZE}
                             children="Name"
+                            fontSize={FONT_SIZE}
                             minWidth={FIELD_WIDTH}
                           />
 
@@ -241,8 +241,8 @@ const FormEntry = () => {
                         <HStack w="100%" py={1}>
                           <InputLeftAddon
                             children="IC No"
-                            fontSize={{ base: 'sm', md: 'md' }}
-                            minWidth={{ base: 'auto', md: field_width }}
+                            fontSize={FONT_SIZE}
+                            minWidth={FIELD_WIDTH}
                           />
                           <Input
                             name="icno"
@@ -269,8 +269,8 @@ const FormEntry = () => {
                         <HStack w="100%" py={1}>
                           <InputLeftAddon
                             children="Mobile No"
-                            fontSize={{ base: 'sm', md: 'md' }}
-                            minWidth={{ base: 'auto', md: field_width }}
+                            fontSize={FONT_SIZE}
+                            minWidth={FIELD_WIDTH}
                           />
                           <Input
                             name="mobile"
@@ -297,8 +297,8 @@ const FormEntry = () => {
                         <HStack w="100%" py={1}>
                           <InputLeftAddon
                             children="Email"
-                            fontSize={{ base: 'sm', md: 'md' }}
-                            minWidth={{ base: 'auto', md: field_width }}
+                            fontSize={FONT_SIZE}
+                            minWidth={FIELD_WIDTH}
                           />
                           <Input
                             name="email"
@@ -325,8 +325,8 @@ const FormEntry = () => {
                         <HStack w="100%" py={1}>
                           <InputLeftAddon
                             children="IG Id"
-                            fontSize={{ base: 'sm', md: 'md' }}
-                            minWidth={{ base: 'auto', md: field_width }}
+                            fontSize={FONT_SIZE}
+                            minWidth={FIELD_WIDTH}
                           />
                           <Input
                             name="igid"
@@ -353,8 +353,8 @@ const FormEntry = () => {
                         <HStack w="100%" py={1}>
                           <InputLeftAddon
                             children="Receipt No"
-                            fontSize={{ base: 'sm', md: 'md' }}
-                            minWidth={{ base: 'none', md: field_width }}
+                            fontSize={FONT_SIZE}
+                            minWidth={FIELD_WIDTH}
                           />
                           <Input
                             name="receiptno"
@@ -381,8 +381,8 @@ const FormEntry = () => {
                         <HStack w="100%" py={1}>
                           <InputLeftAddon
                             children="Amount"
-                            fontSize={{ base: 'sm', md: 'md' }}
-                            minWidth={{ base: 'none', md: field_width }}
+                            fontSize={FONT_SIZE}
+                            minWidth={FIELD_WIDTH}
                           />
                           <Input
                             name="amount"
@@ -456,6 +456,6 @@ const FormEntry = () => {
       </Center>
     </Flex>
   );
-};;
+};
 
 export default FormEntry;
