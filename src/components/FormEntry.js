@@ -192,7 +192,9 @@ const FormEntry = () => {
         >
           <Box p={5} rounded="lg" bg="white" boxShadow="lg">
             <Stack align="center" pb={2}>
-              <Heading size="md">Lucky Draw Entry Form</Heading>
+              <Heading size={{ base: 'md', md: 'sm' }}>
+                Lucky Draw Entry Form
+              </Heading>
             </Stack>
             <form onSubmit={handleSubmit(onSubmit)}>
               <VStack alignItems="flex-start">

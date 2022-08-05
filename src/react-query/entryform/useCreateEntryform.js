@@ -16,10 +16,10 @@ export function useAddEntryform(data) {
   const { mutate } = useMutation(data => addEntryform(data), {
     onSuccess: () => {
       queryClient.invalidateQueries('entryform');
-      toast({
-        title: 'New Entry Form being added!',
-        status: 'success',
-      });
+      // toast({
+      //   title: 'New Entry Form being added!',
+      //   status: 'success',
+      // });
     },
   });
 

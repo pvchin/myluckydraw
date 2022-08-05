@@ -12,18 +12,18 @@ async function addEntryformAttachment(data) {
 export function useAddEntryformAttachment(data) {
   const queryClient = useQueryClient();
   const toast = useCustomToast();
-  
+
   const { mutate } = useMutation(data => addEntryformAttachment(data), {
     onSuccess: () => {
       queryClient.invalidateQueries('entryformattachments');
-      toast({
-        title: 'Entryform Attachment record being added!',
-        status: 'success',
-      });
+      // toast({
+      //   title: 'Entryform Attachment record being added!',
+      //   status: 'success',
+      // });
     },
     onError: () => {
       toast({
-        title: 'Entryform attchment add record error',
+        title: 'Entryform attchment error!',
         status: 'warning',
       });
     },

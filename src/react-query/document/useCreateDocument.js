@@ -16,10 +16,10 @@ export function useAddDocument(data) {
   const { mutate } = useMutation(data => addDocument(data), {
     onSuccess: () => {
       queryClient.invalidateQueries('document');
-      toast({
-        title: 'Document being added!',
-        status: 'success',
-      });
+      // toast({
+      //   title: 'Document being added!',
+      //   status: 'success',
+      // });
     },
   });
 
