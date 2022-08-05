@@ -199,7 +199,7 @@ const FormEntry = () => {
         <Stack
           spacing={8}
           mx="auto"
-          w={{ base: 'auto', md: 'xl' }}
+          w={{ base: 'lg', md: 'xl' }}
           py={{ base: 0, md: 1 }}
           px={{ base: 0, md: 1 }}
         >
