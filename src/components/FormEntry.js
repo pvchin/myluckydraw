@@ -4,6 +4,7 @@ import axios from 'axios';
 import {
   Box,
   Button,
+  ButtonGroup,
   Center,
   Flex,
   FormControl,
@@ -183,6 +184,16 @@ const FormEntry = () => {
     onOpen();
   };
 
+  const handleClear = () => {
+    setValue('name', '');
+    setValue('icno', '');
+    setValue('mobile', '');
+    setValue('email', '');
+    setValue('igid', '');
+    setValue('receiptno', '');
+    setValue('amount', '');
+    setFiles([]);
+  };
   return (
     <Flex minH="70vh">
       <Center>
@@ -218,7 +229,8 @@ const FormEntry = () => {
 
                           <Input
                             p={1}
-                            size={{ base: 'sm', md: 'md' }}
+                            px={2}
+                            size={FONT_SIZE}
                             name="name"
                             value={value}
                             onChange={onChange}
@@ -247,7 +259,8 @@ const FormEntry = () => {
                           <Input
                             name="icno"
                             p={1}
-                            size={{ base: 'sm', md: 'md' }}
+                            px={2}
+                            size={FONT_SIZE}
                             value={value}
                             onChange={onChange}
                             //textTransform="capitalize"
@@ -275,7 +288,8 @@ const FormEntry = () => {
                           <Input
                             name="mobile"
                             p={1}
-                            size={{ base: 'sm', md: 'md' }}
+                            px={2}
+                            size={FONT_SIZE}
                             value={value}
                             onChange={onChange}
                             //textTransform="capitalize"
@@ -304,7 +318,8 @@ const FormEntry = () => {
                             name="email"
                             value={value}
                             p={1}
-                            size={{ base: 'sm', md: 'md' }}
+                            px={2}
+                            size={FONT_SIZE}
                             onChange={onChange}
                             //textTransform="capitalize"
                             ref={ref}
@@ -332,7 +347,8 @@ const FormEntry = () => {
                             name="igid"
                             value={value}
                             p={1}
-                            size={{ base: 'sm', md: 'md' }}
+                            px={2}
+                            size={FONT_SIZE}
                             onChange={onChange}
                             //textTransform="capitalize"
                             ref={ref}
@@ -360,7 +376,8 @@ const FormEntry = () => {
                             name="receiptno"
                             value={value}
                             p={1}
-                            size={{ base: 'sm', md: 'md' }}
+                            px={2}
+                            size={FONT_SIZE}
                             onChange={onChange}
                             //textTransform="capitalize"
                             ref={ref}
@@ -389,7 +406,8 @@ const FormEntry = () => {
                             value={value}
                             type="number"
                             p={1}
-                            size={{ base: 'sm', md: 'md' }}
+                            px={2}
+                            size={FONT_SIZE}
                             onChange={e => onChange(parseFloat(e.target.value))}
                             //textTransform="capitalize"
                             ref={ref}
@@ -401,14 +419,26 @@ const FormEntry = () => {
                   />
                 </FormControl>
               </VStack>
-              <Button
-                mt={4}
-                colorScheme="teal"
-                isLoading={isSubmitting}
-                type="submit"
-              >
-                Submit
-              </Button>
+              <Center>
+                <ButtonGroup spacing={10} pb={3}>
+                  <Button
+                    mt={4}
+                    colorScheme="teal"
+                    isLoading={isSubmitting}
+                    type="submit"
+                  >
+                    Submit
+                  </Button>
+                  <Button
+                    mt={4}
+                    colorScheme="teal"
+                    isLoading={isSubmitting}
+                    onClick={() => handleClear()}
+                  >
+                    Clear
+                  </Button>
+                </ButtonGroup>
+              </Center>
               <Box>
                 <Center>
                   <Heading size={{ base: 'sm', md: 'md' }}>
