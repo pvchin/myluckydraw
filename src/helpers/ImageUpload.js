@@ -210,7 +210,7 @@ const ImageUpload = ({ files, setFiles, onDrop }) => {
                     h="100%"
                   />
                   <VStack>
-                    <IconButton
+                    {/* <IconButton
                       size="sm"
                       aria-label="view image"
                       icon={<FiEye />}
@@ -220,7 +220,7 @@ const ImageUpload = ({ files, setFiles, onDrop }) => {
                           name: file.name,
                         })
                       }
-                    />
+                    /> */}
                     <IconButton
                       size="sm"
                       aria-label="delete image"
