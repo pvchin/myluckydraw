@@ -15,34 +15,46 @@ import {
   VStack,
   Code,
 } from '@chakra-ui/react';
-
+import { ColorModeSwitcher } from '../ColorModeSwitcher';
+import { theme } from '../theme';
+import img1 from '../assets/Giveaway.png';
 import FormEntry from './FormEntry';
 import Header from './Header';
 import Contest from './Contest';
-
-
 const Main = () => {
- 
   return (
     <Container maxW="container.xl" p={0}>
-      <Box
+      <Flex
         h={{ base: 'auto', md: '100vh' }}
         py={[0, 10, 20]}
         direction={{ base: 'column', md: 'row' }}
       >
-        <Grid templateColumns="repeat(2, 1fr)" gap={6}>
-          <GridItem colSpan={2} py={5} >
-            <Header />
-          </GridItem>
 
-          <GridItem colSpan={1} py={5}>
+        <VStack
+          w="full"
+          h="full"
+          p={{ base: 1, md: 10 }}
+          spacing={10}
+          alignItems="flex-start"
+        >
+        <Header />
+          <Center>
             <Contest />
-          </GridItem>
-          <GridItem colSpan={1} py={5}>
+          </Center>
+        </VStack>
+
+        <VStack
+          w="full"
+          h="full"
+          p={{ base: 1, md: 10 }}
+          spacing={10}
+          alignItems="flex-start"
+        >
+          <Center>
             <FormEntry />
-          </GridItem>
-        </Grid>
-      </Box>
+          </Center>
+        </VStack>
+      </Flex>
     </Container>
   );
 };

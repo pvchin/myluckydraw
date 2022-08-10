@@ -22,6 +22,7 @@ import {
   ModalBody,
   ModalCloseButton,
   Select,
+  SimpleGrid,
   Stack,
   HStack,
   VStack,
@@ -202,6 +203,7 @@ const FormEntry = () => {
         py={{ base: 0, md: 1 }}
         //px={{ base: 0, md: 1 }}
       >
+        
         <Box p={5} rounded="lg" bg="white" boxShadow="lg">
           <Stack align="center" pb={2}>
             <Heading size={{ base: 'sm', md: 'md' }}>
