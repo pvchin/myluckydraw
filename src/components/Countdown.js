@@ -16,7 +16,7 @@ function MyTimer({ expiryTimestamp }) {
     restart,
   } = useTimer({
     expiryTimestamp,
-    onExpire: () => console.warn('onExpire called'),
+    onExpire: () => console.warn('Winner Will Be Announced Soon!!'),
   });
 
   return (
@@ -53,8 +53,9 @@ const ShowCounter = ({ days, hours, minutes, seconds }) => {
 };
 
 const Countdown = () => {
-  const time = new Date('2022-08-31T07:00:00.000Z');
-  time.setSeconds(time.getSeconds() + 600); // 10 minutes timer
+    const time = new Date("2022-08-31T23:59+0800");
+    console.log("time", time)
+  time.setSeconds(time.getSeconds()); // 10 minutes timer
   return (
     <div>
       <MyTimer expiryTimestamp={time} />

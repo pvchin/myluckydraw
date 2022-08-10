@@ -7,31 +7,31 @@ import {
   Grid,
   GridItem,
   Heading,
+  Image,
   HStack,
   VStack,
 } from '@chakra-ui/react';
 import CountdownTimer from './CountdownTimer';
 import Countdown from './Countdown';
+import bannerimg from '../assets/banner3.png';
 
 const Header = () => {
-  const THREE_DAYS_IN_MS = 3 * 24 * 60 * 60 * 1000;
-  const NOW_IN_MS = new Date().getTime();
 
-  const dateTimeAfterThreeDays = NOW_IN_MS + THREE_DAYS_IN_MS;
 
   return (
     <Container minH={50}>
       <Grid templateColumns="repeat(1, 1fr)" gap={6}>
         <GridItem colSpan={1}>
           <Center>
-            <Heading fontWeight={2}>Giveaway Lucky Draw</Heading>
+            <Image src={bannerimg} alt="banner" />
+            {/* <Heading fontWeight={2}>Giveaway Lucky Draw</Heading> */}
           </Center>
         </GridItem>
         <GridItem colSpan={1}>
           <Center>
             <VStack>
-              <Heading size="md" color="blue">
-                Count Down to Final Draw 31 August 2022
+              <Heading size="md" color="green.500">
+                Count Down to Final Draw 31st August 2022
               </Heading>
 
               <Countdown />
