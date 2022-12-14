@@ -37,7 +37,7 @@ const Header = () => {
                 <Image src={img1} w={200} />
               </MovingComponent>
             </Box>
-            <Box position="absolute" top="330" left="700">
+            <Box position="absolute" top="330" left="710">
               <MovingComponent
                 type="fadeInFromLeft"
                 duration="1000ms"
