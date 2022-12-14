@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 import { Controller, useForm } from 'react-hook-form';
 import axios from 'axios';
 import {
+  Alert,
+  AlertIcon,
+  AlertTitle,
+  AlertDescription,
   Box,
   Button,
   ButtonGroup,
@@ -66,7 +70,11 @@ const FormEntry = () => {
   const { document } = useDocument();
   const updateDocument = useUpdateDocument();
   const { isOpen, onOpen, onClose } = useDisclosure();
-
+  const {
+    isOpen: isVisible,
+    onClose: onAlertClose,
+    onOpen: onAlertOpen,
+  } = useDisclosure({ defaultIsOpen: true });
   const {
     handleSubmit,
     control,
@@ -182,6 +190,7 @@ const FormEntry = () => {
 
   const handleOpen = () => {
     onOpen();
+    //onAlertOpen
   };
 
   const handleClear = () => {
@@ -203,7 +212,6 @@ const FormEntry = () => {
         py={{ base: 0, md: 1 }}
         //px={{ base: 0, md: 1 }}
       >
-        
         <Box p={5} rounded="lg" bg="white" boxShadow="lg">
           <Stack align="center" pb={2}>
             <Heading size={{ base: 'sm', md: 'md' }}>
@@ -479,6 +487,27 @@ const FormEntry = () => {
           </ModalContent>
         </Modal>
       </Stack>
+      
+      {/* <Alert
+        isOpen={isVisible}
+        status="success"
+        variant="subtle"
+        flexDirection="column"
+        alignItems="center"
+        justifyContent="center"
+        textAlign="center"
+        height="200px"
+      >
+        <AlertIcon boxSize="40px" mr={0} />
+        <AlertTitle mt={4} mb={1} fontSize="lg">
+          Application submitted!
+        </AlertTitle>
+        <AlertDescription maxWidth="sm">
+          Thanks for submitting your application. Our team will get back to you
+          soon.
+        </AlertDescription>
+      </Alert> */}
+      
     </Flex>
   );
 };

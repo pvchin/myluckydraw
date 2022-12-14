@@ -26,14 +26,14 @@ import {
   Text,
   useDisclosure,
 } from '@chakra-ui/react';
-import img1 from '../assets/Giveaway.png';
+import img1 from '../assets/musicallamp.png';
 
 const Contest = () => {
   return (
     <Flex>
       <Stack spacing={5} mx="auto" w={{ base: 'sm', md: 'xl' }} py={1} px={1}>
         <Center>
-          <Image src={img1} alt="album" />
+          <Image src={img1} alt="album" h="45vh" />
         </Center>
       </Stack>
     </Flex>

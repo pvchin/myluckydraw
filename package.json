@@ -26,6 +26,7 @@
     "react-file-viewer": "^1.2.1",
     "react-hook-form": "^7.34.0",
     "react-icons": "^3.0.0",
+    "react-moving-text": "^0.0.7",
     "react-scripts": "5.0.1",
     "react-timer-hook": "^3.0.5",
     "recoil": "^0.7.4",
