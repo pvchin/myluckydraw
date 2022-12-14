@@ -20,9 +20,7 @@ import FormEntry from './FormEntry';
 import Header from './Header';
 import Contest from './Contest';
 
-
 const Main = () => {
- 
   return (
     <Container maxW="container.xl" p={0}>
       <Box
@@ -30,8 +28,8 @@ const Main = () => {
         py={[0, 10, 20]}
         direction={{ base: 'column', md: 'row' }}
       >
-        <Grid templateColumns="repeat(2, 1fr)" gap={6}>
-          <GridItem colSpan={2} py={5} >
+        <Grid templateColumns={{ base: 'auto', md: 'repeat(2,1fr)' }} gap={6}>
+          <GridItem colSpan={2} py={5}>
             <Header />
           </GridItem>
 
