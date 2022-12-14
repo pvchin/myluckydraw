@@ -28,7 +28,10 @@ const Main = () => {
         py={[0, 10, 20]}
         direction={{ base: 'column', md: 'row' }}
       >
-        <Grid templateColumns={{ base: 'auto', md: 'repeat(2,1fr)' }} gap={6}>
+        <Grid
+          templateColumns={{ base: 'repeat(1,1fr)', md: 'repeat(2,1fr)' }}
+          gap={6}
+        >
           <GridItem colSpan={2} py={5}>
             <Header />
           </GridItem>
