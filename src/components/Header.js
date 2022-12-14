@@ -14,7 +14,7 @@ import {
 import { MovingComponent } from 'react-moving-text';
 import CountdownTimer from './CountdownTimer';
 import Countdown from './Countdown';
-import bannerimg from '../assets/bannerr2.png';
+import bannerimg from '../assets/banner.png';
 import img1 from '../assets/giveawaytext.png';
 
 const Header = () => {
@@ -25,7 +25,7 @@ const Header = () => {
           <Image src={bannerimg} alt="banner" />
           <Center>
             <Box position="absolute" top="150" left="90">
-              <MovingComponent
+              {/* <MovingComponent
                 type="flash"
                 duration="1000ms"
                 delay="0s"
@@ -35,10 +35,10 @@ const Header = () => {
                 fillMode="none"
               >
                 <Image src={img1} w={200} />
-              </MovingComponent>
+              </MovingComponent> */}
             </Box>
             <Box position="absolute" top="330" left="710">
-              <MovingComponent
+              {/* <MovingComponent
                 type="fadeInFromLeft"
                 duration="1000ms"
                 delay="0s"
@@ -50,9 +50,9 @@ const Header = () => {
                 <Heading color="black" fontFamily="serif" size="lg">
                   One Winner will be announced on 1/1/2023
                 </Heading>
-              </MovingComponent>
+              </MovingComponent> */}
             </Box>
-            <MovingComponent
+            {/* <MovingComponent
               type="flash"
               duration="1000ms"
               delay="0s"
@@ -60,7 +60,7 @@ const Header = () => {
               timing="ease"
               iteration="5"
               fillMode="none"
-            ></MovingComponent>
+            ></MovingComponent> */}
             {/* <Heading fontWeight={2}>Giveaway Lucky Draw</Heading> */}
           </Center>
         </GridItem>
