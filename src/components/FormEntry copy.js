@@ -43,8 +43,8 @@ import { useDocument } from '../react-query/document/useDocument';
 import { useUpdateDocument } from '../react-query/document/useUpdateDocument';
 import ImageUpload from '../helpers/ImageUpload';
 
-const UPLOADURL = 'https://api.cloudinary.com/v1_1/dgrsgplam/image/upload';
-const DOWNLOADURL = 'https://res.cloudinary.com/v1_1/dgrsgplam/image/upload';
+const UPLOADURL = 'https://api.cloudinary.com/v1_1/dlmzwvakr/image/upload';
+const DOWNLOADURL = 'https://res.cloudinary.com/v1_1/dlmzwvakr/image/upload';
 const UPLOADPRESET = 'mitaluckydraw';
 
 const initial_values = {
@@ -154,20 +154,8 @@ const FormEntry = () => {
         title: 'You need to spend an minimum $5 to claim a lucky draw entry!',
         status: 'warning',
       });
-      //initial form values
-      setValue('name', '');
-      setValue('icno', '');
-      setValue('mobile', '');
-      setValue('email', '');
-      setValue('igid', '');
-      setValue('receiptno', '');
-      setValue('amount', '');
-      setFiles([]);
-
-      console.log('drawno', drawno);
-
       return null;
-    } 
+    }
     for (let i = 1; i <= noCopy; i++) {
       newNo = newNo + 1;
       const newstrno = (10000 + newNo).toString().substring(1);
