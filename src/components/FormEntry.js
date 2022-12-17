@@ -141,14 +141,17 @@ const FormEntry = () => {
   };
 
   const onSubmit = data => {
-    let newNo = 0;
+    const { entryformno, abbre } = document[0];
+    
+    let newNo = entryformno;
     let newDocNo = '';
     let newArray = [];
     let noCopy = Math.floor(data.amount / 5);
     console.log('draw', noCopy);
     for (let i = 1; i <= noCopy; i++) {
-      newNo = document[0].entryformno + i;
-      newDocNo = document[0].abbre + newNo;
+      newNo = newNo + 1;
+      const newstrno = (10000 + newNo).toString().substring(1);
+      newDocNo = abbre + newstrno;
       const { ...fields } = data;
       addEntryform({ ...fields, drawno: newDocNo });
       saveAttachment(newDocNo);
@@ -245,6 +248,7 @@ const FormEntry = () => {
                           //textTransform="capitalize"
                           ref={ref}
                           placeholder="name"
+                          required
                         />
                       </HStack>
                     </InputGroup>
@@ -274,6 +278,7 @@ const FormEntry = () => {
                           //textTransform="capitalize"
                           ref={ref}
                           placeholder="IC No"
+                          required
                         />
                       </HStack>
                     </InputGroup>
@@ -303,6 +308,7 @@ const FormEntry = () => {
                           //textTransform="capitalize"
                           ref={ref}
                           placeholder="mobile no"
+                          required
                         />
                       </HStack>
                     </InputGroup>
@@ -332,6 +338,7 @@ const FormEntry = () => {
                           //textTransform="capitalize"
                           ref={ref}
                           placeholder="email address"
+                          required
                         />
                       </HStack>
                     </InputGroup>
@@ -361,6 +368,7 @@ const FormEntry = () => {
                           //textTransform="capitalize"
                           ref={ref}
                           placeholder="your Instagram id"
+                          required
                         />
                       </HStack>
                     </InputGroup>
@@ -390,6 +398,7 @@ const FormEntry = () => {
                           //textTransform="capitalize"
                           ref={ref}
                           placeholder="receipt no"
+                          required
                         />
                       </HStack>
                     </InputGroup>
@@ -420,6 +429,7 @@ const FormEntry = () => {
                           //textTransform="capitalize"
                           ref={ref}
                           placeholder="amount"
+                          required
                         />
                       </HStack>
                     </InputGroup>
@@ -487,7 +497,7 @@ const FormEntry = () => {
           </ModalContent>
         </Modal>
       </Stack>
-      
+
       {/* <Alert
         isOpen={isVisible}
         status="success"
@@ -507,7 +517,6 @@ const FormEntry = () => {
           soon.
         </AlertDescription>
       </Alert> */}
-      
     </Flex>
   );
 };
