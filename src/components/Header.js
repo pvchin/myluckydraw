@@ -10,6 +10,7 @@ import {
   Image,
   HStack,
   VStack,
+  useBreakpointValue,
 } from '@chakra-ui/react';
 import { MovingComponent } from 'react-moving-text';
 import CountdownTimer from './CountdownTimer';
@@ -19,7 +20,7 @@ import img1 from '../assets/giveawaytext.png';
 
 const Header = () => {
   return (
-    <Flex minH={50}>
+    <Flex minH={{ base: "auto", md: 50 }}>
       <Center>
         <Image src={bannerimg} alt="banner" />
       </Center>
