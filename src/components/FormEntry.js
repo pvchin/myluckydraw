@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Controller, useForm } from 'react-hook-form';
 import axios from 'axios';
+import { useCustomToast } from '../helpers/useCustomToast';
 import {
   Alert,
   AlertIcon,
@@ -57,6 +58,7 @@ const initial_values = {
 };
 
 const FormEntry = () => {
+  const toast = useCustomToast();
   const FIELD_WIDTH = useBreakpointValue({ base: 20, md: 40 });
   const FONT_SIZE = useBreakpointValue({ base: 10, md: 18 });
   const [state, setState] = useState(initial_values);
@@ -142,12 +144,18 @@ const FormEntry = () => {
 
   const onSubmit = data => {
     const { entryformno, abbre } = document[0];
-    
+
     let newNo = entryformno;
     let newDocNo = '';
     let newArray = [];
     let noCopy = Math.floor(data.amount / 5);
-    console.log('draw', noCopy);
+    if ((noCopy < 1)) {
+      toast({
+        title: 'You need to spend an minimum $5 to claim a lucky draw entry!',
+        status: 'warning',
+      });
+      return null;
+    }
     for (let i = 1; i <= noCopy; i++) {
       newNo = newNo + 1;
       const newstrno = (10000 + newNo).toString().substring(1);
