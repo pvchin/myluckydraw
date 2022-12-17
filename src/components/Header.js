@@ -20,7 +20,7 @@ import img1 from '../assets/giveawaytext.png';
 
 const Header = () => {
   return (
-    <Flex minH={{ base: "auto", md: 50 }}>
+    <Flex minH={50}>
       <Center>
         <Image src={bannerimg} alt="banner" />
       </Center>
