@@ -26,7 +26,7 @@ import {
   Text,
   useDisclosure,
 } from '@chakra-ui/react';
-import img1 from '../assets/musicallamp.png';
+import img1 from '../assets/btsv.jpeg';
 
 const Contest = () => {
   return (

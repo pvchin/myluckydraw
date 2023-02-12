@@ -15,7 +15,7 @@ import {
 import { MovingComponent } from 'react-moving-text';
 import CountdownTimer from './CountdownTimer';
 import Countdown from './Countdown';
-import bannerimg from '../assets/banner.png';
+import bannerimg from '../assets/vbanner.png';
 import img1 from '../assets/giveawaytext.png';
 
 const Header = () => {
