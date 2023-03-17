@@ -26,7 +26,7 @@ import {
   Text,
   useDisclosure,
 } from '@chakra-ui/react';
-import img1 from '../assets/musicallamp.png';
+import img1 from '../assets/jhope.jpeg';
 
 const Contest = () => {
   return (
@@ -39,7 +39,7 @@ const Contest = () => {
         px={{ base: '0', md: '1' }}
       >
         <Center>
-          <Image src={img1} alt="album" h="45vh" />
+          <Image src={img1} alt="album" h="53vh" />
         </Center>
       </Stack>
     </Flex>

@@ -36,7 +36,7 @@ const Main = () => {
           spacing={10}
           alignItems="flex-start"
         >
-          <Header />
+          {/* <Header /> */}
           <Center>
             <Contest />
           </Center>
