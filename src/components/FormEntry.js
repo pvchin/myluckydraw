@@ -485,6 +485,11 @@ const FormEntry = () => {
               </Center>
               <ImageUpload files={files} setFiles={setFiles} onDrop={onDrop} />
             </Box>
+            <Box>
+              <Text fontSize={12}>
+                Note: All entries will be checked against your receipt and will be void if incorrect!
+              </Text>
+            </Box>
           </form>
         </Box>
         <Modal isOpen={isOpen} onClose={onClose}>

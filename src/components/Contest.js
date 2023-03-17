@@ -39,7 +39,7 @@ const Contest = () => {
         px={{ base: '0', md: '1' }}
       >
         <Center>
-          <Image src={img1} alt="album" h="53vh" />
+          <Image src={img1} alt="album" h="54vh" />
         </Center>
       </Stack>
     </Flex>
