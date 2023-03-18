@@ -486,9 +486,15 @@ const FormEntry = () => {
               <ImageUpload files={files} setFiles={setFiles} onDrop={onDrop} />
             </Box>
             <Box>
-              <Text fontSize={12}>
+              <Text fontSize={14}>
                 Note: All entries will be checked against your receipt and will be void if incorrect!
               </Text>
+              <Center>
+
+              <Text fontSize="md" fontWeight={20} color="red">
+                WARNING: Any incorrect entry details will be disqualified!!     
+              </Text>
+              </Center>
             </Box>
           </form>
         </Box>
